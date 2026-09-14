@@ -9,5 +9,9 @@
         public string Category { get; set; } = "";
 
         public int CookingTime { get; set; }
+        public string Ingredients { get; set; } = "";
+        public string Instructions { get; set; } = "";
+        public string ImagePath { get; set; } = "";
+
     }
 }
