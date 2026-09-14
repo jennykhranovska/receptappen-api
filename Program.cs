@@ -1,9 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using receptappen_api.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite("Data Source=recipes.db"));
+
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
