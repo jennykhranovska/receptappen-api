@@ -10,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite("Data Source=recipes.db"));
 
+
 // OpenAPI
 builder.Services.AddOpenApi();
 
